@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
-//= require_tree .
+//= require cable
+//= require application_cable
+//= require chat
 
 $(function(){ $(document).foundation(); });
