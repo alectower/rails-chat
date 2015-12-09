@@ -2,15 +2,17 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'arel', github: 'rails/arel', branch: 'master'
-gem 'rack', github: 'rack/rack', branch: 'master'
 gem 'rails', github: 'rails/rails', branch: 'master'
+gem 'sprockets-rails', github: "rails/sprockets-rails"
 gem 'actioncable', github: 'rails/actioncable', branch: 'master'
+gem 'rack', github: 'rack/rack', branch: 'master'
+gem 'arel', github: 'rails/arel', branch: 'master'
 gem 'devise'
 gem 'foundation-rails'
 gem 'haml-rails'
 gem 'puma'
 gem 'quiet_assets'
+#gem 'quiet_assets'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -18,7 +20,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', github: 'rails/coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -47,7 +49,9 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', github: 'rails/web-console'
+#  gem 'better_errors'
+#  gem "binding_of_caller"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
