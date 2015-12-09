@@ -1,7 +1,7 @@
 class ChatChannel < ApplicationCable::Channel
   def subscribed
     p 'subscribed'
-    @color = ["red", "blue", "green", "yellow", "purple"].sample(1)
+    @color = ["grey", "red", "blue", "green", "purple"].sample(1)
     stream_from "chat_#{params[:room]}"
   end
 

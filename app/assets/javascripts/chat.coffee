@@ -1,7 +1,12 @@
 $ ->
   sub = App.cable.subscriptions.create { channel: "ChatChannel", room: "Best Room" },
     received: (data) ->
-      $('#conversation').append("<div class='message' style='background-color:" + data.color + "'>" + data['body'] + "</div>")
+      console.log data
+      $('#conversation').append """
+          <div class='message' style='background-color:#{data.color}'>
+            #{data['body']}
+          </div>
+        """
       $('#conversation').scrollTop($('#conversation').get(0).scrollHeight)
 
   $('#send').click ->
