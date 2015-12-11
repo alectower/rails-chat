@@ -1,0 +1,13 @@
+= form_for(@user, url: users_path) do |f|
+  %h3.text-center Sign up
+  .form-group
+    = f.label :email
+    = f.text_field :email, :autofocus => true
+  .form-group
+    = f.label :password
+    = f.text_field :password, required: true, type: 'password'
+  .form-group
+    = f.label :password_confirmation
+    = f.text_field :password_confirmation, required: true, type: 'password'
+  .form-group.text-center
+    = f.submit 'Sign up', :class => 'button round'
