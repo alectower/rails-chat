@@ -1,2 +1,2 @@
 @App = {}
-App.cable = Cable.createConsumer('ws://0.0.0.0:28080')
+App.cable = Cable.createConsumer('ws://localhost:28080')
