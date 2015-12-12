@@ -4,7 +4,7 @@ $ ->
       console.log data
       $('#conversation').append """
           <div class='message' style='background-color:#{data.color}'>
-            #{data['body']}
+            #{data.email}: #{data.body}
           </div>
         """
       $('#conversation').scrollTop($('#conversation').get(0).scrollHeight)
